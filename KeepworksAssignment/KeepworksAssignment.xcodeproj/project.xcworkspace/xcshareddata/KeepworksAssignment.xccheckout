@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3CCD904A-2E62-49E8-BD77-6A00B93FBEFB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>KeepworksAssignment</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9194B522587AFF00C56C3374D5F70BF5F2D0614E</key>
+		<string>https://github.com/hramya/EventTrackerApplication.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>KeepworksAssignment/KeepworksAssignment.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9194B522587AFF00C56C3374D5F70BF5F2D0614E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/hramya/EventTrackerApplication.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9194B522587AFF00C56C3374D5F70BF5F2D0614E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9194B522587AFF00C56C3374D5F70BF5F2D0614E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>EventTrackerApplication</string>
+		</dict>
+	</array>
+</dict>
+</plist>

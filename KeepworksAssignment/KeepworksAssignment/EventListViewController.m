@@ -161,6 +161,7 @@ kEventArrayConstants;
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     EventDetailsViewController * detailsViewController = [[EventDetailsViewController alloc] init];
     detailsViewController.currentEventArray = self.eventsListArray[indexPath.row];
+    detailsViewController.isPresentedModally = NO;
     
     [self.navigationController pushViewController:detailsViewController animated:YES];
 }
@@ -214,6 +215,7 @@ kEventArrayConstants;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     EventDetailsViewController * detailsViewController = [[EventDetailsViewController alloc] init];
     detailsViewController.currentEventArray = self.eventsListArray[indexPath.row];
+    detailsViewController.isPresentedModally = NO;
     
     [self.navigationController pushViewController:detailsViewController animated:YES];
 }

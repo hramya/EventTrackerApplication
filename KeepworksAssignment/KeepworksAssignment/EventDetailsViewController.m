@@ -50,11 +50,20 @@ kEventArrayConstants;
     [self.tableView registerNib:nib
          forCellReuseIdentifier:@"SwitchTableViewCellIdentifier"];
     
-    //adding gesture recognizers to show screen upon swipe
-    UISwipeGestureRecognizer * leftSwipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
-                                                                                               action:@selector(showTrackedEventsForUser)];
-    [leftSwipeRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
-    [self.view addGestureRecognizer:leftSwipeRecognizer];
+    if(!self.isPresentedModally) {
+        //adding gesture recognizers to show screen upon swipe
+        UISwipeGestureRecognizer * leftSwipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                                   action:@selector(showTrackedEventsForUser)];
+        [leftSwipeRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
+        [self.view addGestureRecognizer:leftSwipeRecognizer];
+    }
+    else {
+        //add button to dismiss
+        UIBarButtonItem * doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                     target:self
+                                                                                     action:@selector(doneButtonClicked)];
+        self.navigationItem.leftBarButtonItem = doneButton;
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -82,6 +91,12 @@ kEventArrayConstants;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Button click method
+
+-(void)doneButtonClicked {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Swipe gesture methods
@@ -121,6 +136,8 @@ kEventArrayConstants;
     
     cell.textLabel.font = [UIFont boldSystemFontOfSize:18];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:18];
+    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     switch (indexPath.row) {
         case 0://event name

@@ -12,5 +12,6 @@
 <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray * currentEventArray;
+@property (nonatomic) BOOL isPresentedModally;
 
 @end

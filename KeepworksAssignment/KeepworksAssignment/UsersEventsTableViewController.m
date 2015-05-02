@@ -145,8 +145,13 @@ kEventArrayConstants;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     EventDetailsViewController * eventDetails = [[EventDetailsViewController alloc] init];
     eventDetails.currentEventArray = self.usersEventsArray[indexPath.row];
+    eventDetails.isPresentedModally = YES;
     
-    [self.navigationController pushViewController:eventDetails animated:YES];
+    UINavigationController * wrapper = [[UINavigationController alloc] initWithRootViewController:eventDetails];
+    [wrapper setModalPresentationStyle:UIModalPresentationFormSheet];
+    [wrapper setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+    
+    [self.navigationController presentViewController:wrapper animated:YES completion:nil];
 }
 
 #pragma mark - Switch cell delegate implementation
